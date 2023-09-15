@@ -284,7 +284,7 @@ async def main():
     bot.add_handler(MessageHandler(
         start, filters=command(BotCommands.StartCommand)))
     bot.add_handler(MessageHandler(log, filters=command(
-        BotCommands.LogCommand) & CustomFilters.sudo))
+        BotCommands.LogCommand) & CustomFilters.owner))
     bot.add_handler(MessageHandler(restart, filters=command(
         BotCommands.RestartCommand) & CustomFilters.sudo))
     bot.add_handler(MessageHandler(ping, filters=command(
